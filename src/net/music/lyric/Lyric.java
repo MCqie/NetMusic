@@ -9,8 +9,9 @@ import java.util.LinkedHashMap;
 public class Lyric {
     ArrayList<LyticItem> lyrics=new ArrayList<>();
     public Lyric(String lyricString){
-            String[] s = lyricString.split("\\n");
-        lyrics.add(new LyticItem("- - - - - - - - - -", 0.0));
+        lyricString=lyricString==null? "[00:01.935]纯音乐\n" :lyricString;
+            String[] s = lyricString.split("\n");
+            lyrics.add(new LyticItem("- - - - - - - - - -", 0.0));
             for (String sa : s) {
                 try {
                 String time = getSubString(sa, "[","]");
@@ -19,7 +20,7 @@ public class Lyric {
 //time.split(":");
                 Double timechick = Double.parseDouble(timestr[0]) * 60 + Double.parseDouble(timestr[1]);
                 String Lyr = sa.replace("["+time+"]", "");
-                System.out.println(sa + "-----" + time + "-----" + Lyr);
+                System.out.println(sa);
                 lyrics.add(new LyticItem(Lyr, timechick));
                 LoadToPane();
 
