@@ -1,0 +1,8 @@
+
+/* 此处更改 列表框颜色 */
+    .list-cell:selected {
+        -fx-background: #aaaaaa;
+    }
+    .list-cell{
+        -fx-background: #ffffff;
+    }

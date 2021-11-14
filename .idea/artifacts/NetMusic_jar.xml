@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="NetMusic:jar">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="NetMusic.jar">
+      <element id="module-output" name="NetMusic" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/fastjson-1.2.62.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Libs/jfoenix-8.0.10.jar" path-in-jar="/" />
+      <element id="library" level="module" name="fastjson-1.2.62.jar" module-name="NetMusic" />
+      <element id="library" level="project" name="jfoenix-8.0.10" />
+      <element id="library" level="project" name="KotlinJavaRuntime" />
+    </root>
+  </artifact>
+</component>
